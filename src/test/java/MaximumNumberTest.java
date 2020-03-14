@@ -56,4 +56,11 @@ public class MaximumNumberTest
         result3 = maximum.getMaximumString("welcome", "hello", "hi");
         Assert.assertEquals("welcome", result3);
     }
+
+    @Test
+    public void giveString_WhenSecondStringIsMaximum_ThenReturnSecondString()
+    {
+        result3 = maximum.getMaximumString("hello", "welcome", "hi");
+        Assert.assertEquals("welcome", result3);
+    }
 }
