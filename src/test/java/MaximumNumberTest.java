@@ -84,4 +84,11 @@ public class MaximumNumberTest
         result3 = maximum.getMaximum("123", "231", "444");
         Assert.assertEquals("444", result3);
     }
+
+    @Test
+    public void giveStringCombination_WhenGetMaximumString_ThenReturnMaximumString()
+    {
+        result3 = maximum.getMaximum("ABC", "123", "abc");
+        Assert.assertEquals("abc", result3);
+    }
 }
