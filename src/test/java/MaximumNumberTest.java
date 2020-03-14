@@ -11,63 +11,70 @@ public class MaximumNumberTest
     @Test
     public void givenIntegerNumbers_WhenFirstNumberIsMaximum_ThenReturnFirstNumber()
     {
-        result1 = maximum.getMaximumNumber(15, 10, 5);
+        result1 = maximum.getMaximum(15, 10, 5);
         Assert.assertEquals(15, result1);
     }
 
     @Test
     public void givenIntegerNumbers_WhenSecondNumberIsMaximum_ThenReturnSecondNumber()
     {
-        result1 = maximum.getMaximumNumber(5, 15, 10);
+        result1 = maximum.getMaximum(5, 15, 10);
         Assert.assertEquals(15, result1);
     }
 
     @Test
     public void givenIntegerNumbers_WhenThirdNumberIsMaximum_ThenReturnThirdNumber()
     {
-        result1 = maximum.getMaximumNumber(5, 10, 15);
+        result1 = maximum.getMaximum(5, 10, 15);
         Assert.assertEquals(15, result1);
     }
 
     @Test
     public void giveFloatNumbers_WhenFirstNumberIsMaximum_ThenReturnFirstNumber()
     {
-        result2 = maximum.getMaximumNumber(15.4f, 10.4f, 5.4f);
+        result2 = maximum.getMaximum(15.4f, 10.4f, 5.4f);
         Assert.assertEquals((Float)15.4f, result2);
     }
 
     @Test
     public void giveFloatNumbers_WhenSecondNumberIsMaximum_ThenReturnSecondNumber()
     {
-        result2 = maximum.getMaximumNumber(5.4f, 15.4f, 10.4f);
+        result2 = maximum.getMaximum(5.4f, 15.4f, 10.4f);
         Assert.assertEquals((Float)15.4f, result2);
     }
 
     @Test
     public void giveFloatNumbers_WhenThirdNumberIsMaximum_ThenReturnThirdNumber()
     {
-        result2 = maximum.getMaximumNumber(5.4f, 10.4f, 15.4f);
+        result2 = maximum.getMaximum(5.4f, 10.4f, 15.4f);
         Assert.assertEquals((Float)15.4f, result2);
     }
 
     @Test
     public void giveString_WhenFirstStringIsMaximum_ThenReturnFirstString()
     {
-        result3 = maximum.getMaximumString("welcome", "hello", "hi");
+        result3 = maximum.getMaximum("welcome", "hello", "hi");
         Assert.assertEquals("welcome", result3);
     }
 
     @Test
     public void giveString_WhenSecondStringIsMaximum_ThenReturnSecondString()
     {
-        result3 = maximum.getMaximumString("hello", "welcome", "hi");
+        result3 = maximum.getMaximum("hello", "welcome", "hi");
         Assert.assertEquals("welcome", result3);
     }
 
     @Test
     public void giveString_WhenThirdStringIsMaximum_ThenReturnThirdString()
     {
-        result3 = maximum.getMaximumString("hello", "hi", "welcome");
+        result3 = maximum.getMaximum("hello", "hi", "welcome");
         Assert.assertEquals("welcome", result3);
+    }
+
+    @Test
+    public void giveString_WhenCapitalMaximumString_ThenReturnMaximumString()
+    {
+        result3 = maximum.getMaximum("HELLO", "HI", "WELCOME");
+        Assert.assertEquals("WELCOME", result3);
     }
 }
