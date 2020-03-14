@@ -7,7 +7,7 @@ public class MaximumNumberTest
     int result;
 
     @Test
-    public void givenFirstNumber_WhenMaximum_ThenReturnFirstNumber()
+    public void givenIntegerNumbers_WhenMaximum_ThenReturnMaximumNumber()
     {
         result = number.getMaximumNumber(5,10,15);
         Assert.assertEquals(15, result);
