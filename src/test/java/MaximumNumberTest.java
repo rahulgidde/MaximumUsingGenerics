@@ -36,9 +36,16 @@ public class MaximumNumberTest
     }
 
     @Test
-    public void giveFloatNumbers_WhenSecondNumberIsMaximum_ThenReturnFirstNumber()
+    public void giveFloatNumbers_WhenSecondNumberIsMaximum_ThenReturnSecondNumber()
     {
         result2 = number.getMaximumNumber(5.4f, 15.4f, 10.4f);
+        Assert.assertEquals((Float)15.4f, result2);
+    }
+
+    @Test
+    public void giveFloatNumbers_WhenThirdNumberIsMaximum_ThenReturnThirdNumber()
+    {
+        result2 = number.getMaximumNumber(5.4f, 10.4f, 15.4f);
         Assert.assertEquals((Float)15.4f, result2);
     }
 }
