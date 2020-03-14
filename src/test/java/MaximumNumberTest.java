@@ -72,9 +72,16 @@ public class MaximumNumberTest
     }
 
     @Test
-    public void giveString_WhenCapitalMaximumString_ThenReturnMaximumString()
+    public void giveCapitalString_WhenGetMaximumString_ThenReturnMaximumString()
     {
         result3 = maximum.getMaximum("HELLO", "HI", "WELCOME");
         Assert.assertEquals("WELCOME", result3);
+    }
+
+    @Test
+    public void giveNumberAsString_WhenGetMaximumString_ThenReturnMaximumString()
+    {
+        result3 = maximum.getMaximum("123", "231", "444");
+        Assert.assertEquals("444", result3);
     }
 }
