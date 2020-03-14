@@ -19,4 +19,11 @@ public class MaximumNumberTest
         result = number.getMaximumNumber(5, 15, 10);
         Assert.assertEquals(15, result);
     }
+
+    @Test
+    public void givenIntegerNumbers_WhenThirdNumberIsMaximum_ThenReturnThirdNumber()
+    {
+        result = number.getMaximumNumber(5, 10, 15);
+        Assert.assertEquals(15, result);
+    }
 }
