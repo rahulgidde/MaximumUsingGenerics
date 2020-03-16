@@ -21,7 +21,9 @@ public class MaximumNumber<T extends Comparable<T>>
     //METHOD TO CALL INTERNAL METHOD
     public T getMaximum()
     {
-        return getMaximum(firstValue,secondValue,thirdValue);
+        T maximum = getMaximum(firstValue,secondValue,thirdValue);
+        printMaximum(maximum);
+        return maximum;
     }
 
     //METHOD TO FIND MAXIMUM
@@ -33,6 +35,12 @@ public class MaximumNumber<T extends Comparable<T>>
         if(thirdNumber.compareTo(maximumNumber) > 0)
             maximumNumber = thirdNumber;
         return maximumNumber;
+    }
+
+    //METHOD TO PRINT MAXIMUM
+    public void printMaximum(T maximum)
+    {
+        System.out.println("Maximum Value : " + maximum);
     }
 
     //MAIN METHOD
