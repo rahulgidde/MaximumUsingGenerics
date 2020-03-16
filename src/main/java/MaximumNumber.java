@@ -1,7 +1,7 @@
-public class MaximumNumber
+public class MaximumNumber<T extends Comparable<T>>
 {
     //METHOD TO FIND MAXIMUM
-    public <T extends Comparable> T getMaximum(T firstNumber, T secondNumber, T thirdNumber)
+    public <T extends Comparable<T>> T getMaximum(T firstNumber, T secondNumber, T thirdNumber)
     {
         T maximumNumber = firstNumber;
         if(secondNumber.compareTo(maximumNumber) > 0)
